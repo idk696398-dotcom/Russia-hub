@@ -1,0 +1,332 @@
+-- asjdhf783q4rhfnaksdbf78q34gfsda_-- [RUSSIA_HUB_SECURE_ENCRYPTED_PAYLOAD_9823746] -- jkasdhf78q34gfasdnkfjhasdbf78q3q48trhgfabskjdhf_--
+-- =========================================================================
+-- RUSSIA HUB - OBFUSCATED QUANTUM META-PROGRAMMING ENVIRONMENT
+-- =========================================================================
+local _0xVM_Bytecode = "\x4c\x75\x61\x2d\x44\x61\x4f\x42\x33\x21\x73\x65\x2d\x53\x65\x63\x75\x72\x65\x2d\x56\x4d\x2d\x43\x6f\x6e\x74\x61\x69\x6e\x65\x72"
+
+local _0xVM_Chunks = {
+   "bG9jYWwgXzB4U1lTVEVNX1MgPSBnYW1lOkdldFNlcnZpY2UoIlJ1blNlcnZpY2UiKQ==",
+   "bG9jYWwgXzB4U1lTVEVNX1AgPSBnYW1lOkdldFNlcnZpY2UoIlBsYXllcnMiKQ==",
+   "bG9jYWwgXzB4U1lTVEVNX1IgPSBnYW1lOkdldFNlcnZpY2UoIlJlcGxpY2F0ZWRTdG9yYWdlIik="
+}
+
+local function _daob3se_decode(data)
+   local b = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+   data = string.gsub(data, '[^'..b..'=]', '')
+   return (data:gsub('.', function(x)
+      if (x == '=') then return '' end
+      local r,f='',(b:find(x)-1)
+      for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end
+      return r;
+   end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x)
+      if (#x ~= 8) then return '' end
+      local c=0
+      for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end
+      return string.char(c)
+   end))
+end
+
+pcall(function()
+   for _, chunk in ipairs(_0xVM_Chunks) do
+      local decoded = _daob3se_decode(chunk)
+      if decoded then
+         local fn = loadstring(decoded)
+         if fn then pcall(fn) end
+      end
+   end
+end)
+
+local _CONSTANTS = {
+   _META = {
+      _VECTOR_ALPHA = Vector3.new(-9, 4, -9),
+      _VECTOR_BETA = Vector3.new(8, 4, 19),
+      _VECTOR_EPSILON = 0.0001,
+      _HASH_SIGNATURE = "KEY_PERMAMENT_ajbjcjdidir7r7557jyt9r748thcjd83u4fmx9e83i4jd9x9s9e3",
+      _HASH_SIGNATURE_ALT = "LUAP-e6ccb511-b594-4672-96b3-bad3f6f6939aI"
+   }
+}
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local _SRV_RUN = game:GetService("RunService")
+local _SRV_PLY = game:GetService("Players")
+local _SRV_REP = game:GetService("ReplicatedStorage")
+local _LOCAL_PLR = _SRV_PLY.LocalPlayer
+
+local function _metaprogramming_abstract_resolver(_node, _predicate)
+   local _stack = {_node}
+   while #_stack > 0 do
+      local _current = table.remove(_stack)
+      if _predicate(_current) then return _current end
+      for _, _child in ipairs(_current:GetChildren()) do
+         table.insert(_stack, _child)
+      end
+   end
+   return nil
+end
+
+local VIPWindow = Rayfield:CreateWindow({
+   Name = "Russia Hub",
+   Icon = 0,
+   LoadingTitle = "Russia Hub",
+   LoadingSubtitle = "Russia Hub",
+   Theme = "Default",
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false,
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = "RussiaHub",
+      FileName = "RussiaHubConfig"
+   },
+   KeySystem = false,
+   KeySettings = {
+      Title = "Russia Hub",
+      Subtitle = "Russia Hub",
+      Note = "Enter Your VIP key/permament key to get access",
+      FileName = "RussiaHubKey",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {_CONSTANTS._META._HASH_SIGNATURE, _CONSTANTS._META._HASH_SIGNATURE_ALT}
+   }
+})
+
+local VIPTab = VIPWindow:CreateTab("Russia Hub", 4483362458)
+local VIPSection = VIPTab:CreateSection("Russia Hub")
+
+local _quantum_state_vector_v1 = {
+   _active = false,
+   _routine = nil,
+   _entropy_register = 0
+}
+
+VIPTab:CreateToggle({
+   Name = "Auto Key Press V1",
+   CurrentValue = false,
+   Flag = "QuantumAutoKeyPressV1",
+   Callback = function(_state)
+      _quantum_state_vector_v1._active = _state
+      if _state then
+         _quantum_state_vector_v1._routine = task.spawn(function()
+            local _gui_target = _LOCAL_PLR:WaitForChild("PlayerGui"):WaitForChild("MemoryPestBreathUI")
+            local _remote_target = _SRV_REP:WaitForChild("Remotes"):WaitForChild("PestBedVisit")
+            local _last_token, _last_rev = nil, nil
+            
+            while _quantum_state_vector_v1._active do
+               pcall(function()
+                  if _gui_target:GetAttribute("Active") and _gui_target:GetAttribute("PromptReady") and not _gui_target:GetAttribute("InputExpired") then
+                     local _token = _gui_target:GetAttribute("Token")
+                     local _rev = _gui_target:GetAttribute("InputRevision") or 1
+                     if _token and (_token ~= _last_token or _rev ~= _last_rev) then
+                        local _key = _gui_target:GetAttribute("Key") or _gui_target:GetAttribute("GamepadKey") or "E"
+                        local _attempt = _gui_target:GetAttribute("Attempt") or 0
+                        _remote_target:FireServer("BreathHold", _token, true, _key, _rev, workspace:GetServerTimeNow(), _attempt)
+                        _last_token = _token
+                        _last_rev = _rev
+                     end
+                  else
+                     _last_token, _last_rev = nil, nil
+                  end
+               end)
+               task.wait(_CONSTANTS._META._VECTOR_EPSILON * 500)
+            end
+         end)
+         Rayfield:Notify({ Title = "Russia Hub", Content = "Auto Key Press V1 activated.", Duration = 4 })
+      else
+         if _quantum_state_vector_v1._routine then
+            task.cancel(_quantum_state_vector_v1._routine)
+            _quantum_state_vector_v1._routine = nil
+         end
+         Rayfield:Notify({ Title = "Russia Hub", Content = "Auto Key Press V1 deactivated.", Duration = 4 })
+      end
+   end,
+})
+
+local _quantum_state_vector_v2 = {
+   _active = false,
+   _routine = nil
+}
+
+VIPTab:CreateToggle({
+   Name = "Auto Key Press V2 (Simulate)",
+   CurrentValue = false,
+   Flag = "QuantumAutoKeyPressV2",
+   Callback = function(_state)
+      _quantum_state_vector_v2._active = _state
+      if _state then
+         _quantum_state_vector_v2._routine = task.spawn(function()
+            local _gui_target = _LOCAL_PLR:WaitForChild("PlayerGui"):WaitForChild("MemoryPestBreathUI")
+            local _cached_key = nil
+            local function _purge_bindings()
+               if _cached_key and keyrelease then pcall(keyrelease, _cached_key) end
+               _cached_key = nil
+            end
+
+            while _quantum_state_vector_v2._active do
+               pcall(function()
+                  if _gui_target:GetAttribute("Active") and _gui_target:GetAttribute("PromptReady") then
+                     local _key_id = _gui_target:GetAttribute("Key")
+                     if _key_id and _key_id ~= _cached_key then
+                        _purge_bindings()
+                        _cached_key = _key_id
+                        if keypress then pcall(keypress, _key_id) end
+                     end
+                  else
+                     _purge_bindings()
+                  end
+               end)
+               task.wait(_CONSTANTS._META._VECTOR_EPSILON * 500)
+            end
+         end)
+         Rayfield:Notify({ Title = "Russia Hub", Content = "Auto Key Press V2 activated.", Duration = 4 })
+      else
+         _quantum_state_vector_v2._active = false
+         if _quantum_state_vector_v2._routine then
+            task.cancel(_quantum_state_vector_v2._routine)
+            _quantum_state_vector_v2._routine = nil
+         end
+         Rayfield:Notify({ Title = "Russia Hub", Content = "Auto Key Press V2 deactivated.", Duration = 4 })
+      end
+   end,
+})
+
+local _quantum_payback_matrix = {
+   _active = false,
+   _thread = nil
+}
+
+VIPTab:CreateToggle({
+   Name = "Auto Payback",
+   CurrentValue = false,
+   Flag = "QuantumAutoPaybackToggle",
+   Callback = function(_state)
+      _quantum_payback_matrix._active = _state
+      if _state then
+         _quantum_payback_matrix._thread = task.spawn(function()
+            while _quantum_payback_matrix._active do
+               pcall(function()
+                  local _character_pointer = _LOCAL_PLR.Character or _LOCAL_PLR.CharacterAdded:Wait()
+                  local _root_pointer = _character_pointer:WaitForChild("HumanoidRootPart")
+
+                  if not _quantum_payback_matrix._active then return end
+                  _root_pointer.CFrame = CFrame.new(_CONSTANTS._META._VECTOR_ALPHA)
+
+                  pcall(function()
+                     local _node_teddy = _metaprogramming_abstract_resolver(workspace, function(_inst)
+                        return _inst.Name == "Teddybear"
+                     end)
+                     if _node_teddy then
+                        local _detector = _node_teddy:FindFirstChildOfClass("ClickDetector")
+                        if _detector then fireclickdetector(_detector) end
+                     end
+                  end)
+
+                  task.wait(0.5)
+                  if not _quantum_payback_matrix._active then return end
+
+                  _root_pointer.CFrame = CFrame.new(_CONSTANTS._META._VECTOR_BETA)
+
+                  pcall(function()
+                     local _node_lamp = _metaprogramming_abstract_resolver(workspace, function(_inst)
+                        return _inst.Name == "Lamp"
+                     end)
+                     if _node_lamp then
+                        local _detector = _node_lamp:FindFirstChildOfClass("ClickDetector")
+                        if _detector then fireclickdetector(_detector) end
+                     end
+                  end)
+               end)
+               task.wait(1.0)
+            end
+         end)
+         Rayfield:Notify({ Title = "Russia Hub", Content = "Auto Payback activated.", Duration = 4 })
+      else
+         _quantum_payback_matrix._active = false
+         if _quantum_payback_matrix._thread then
+            task.cancel(_quantum_payback_matrix._thread)
+            _quantum_payback_matrix._thread = nil
+         end
+         Rayfield:Notify({ Title = "Russia Hub", Content = "Auto Payback deactivated.", Duration = 4 })
+      end
+   end,
+})
+
+-- Night 3 Tab
+local Night3Tab = VIPWindow:CreateTab("Night 3", 4483362458)
+local Night3Section = Night3Tab:CreateSection("Night 3 Features")
+
+local _ammo_pickup_matrix = {
+   _active = false,
+   _thread = nil
+}
+
+Night3Tab:CreateToggle({
+   Name = "Auto Ammo Pickup",
+   CurrentValue = false,
+   Flag = "QuantumAutoAmmoPickupToggle",
+   Callback = function(_state)
+      _ammo_pickup_matrix._active = _state
+      if _state then
+         _ammo_pickup_matrix._thread = task.spawn(function()
+            local folder = workspace:WaitForChild("AmmoPiles")
+            while _ammo_pickup_matrix._active do
+               task.wait(0.2)
+               pcall(function()
+                  local char = _LOCAL_PLR.Character
+                  local bp = _LOCAL_PLR:FindFirstChild("Backpack")
+                  local gun = (char and char:FindFirstChild("Shotgun")) or (bp and bp:FindFirstChild("Shotgun"))
+                  local ammo = gun and gun:FindFirstChild("Ammo")
+
+                  if ammo and ammo.Value == 1 then
+                     local root = char and char:FindFirstChild("HumanoidRootPart")
+                     if root then
+                        local target, max = nil, -1
+                        for _, v in ipairs(folder:GetChildren()) do
+                           if v:IsA("Model") then
+                              local count = #v:GetDescendants()
+                              if count > max then
+                                 max, target = count, v
+                              end
+                           end
+                        end
+                        
+                        if target and _ammo_pickup_matrix._active then
+                           local pos = root.CFrame
+                           root.CFrame = target:GetPivot() + Vector3.new(0, 3, 0)
+                           task.wait(0.15)
+                           
+                           local cd = target:FindFirstChildWhichIsA("ClickDetector", true)
+                           local pp = target:FindFirstChildWhichIsA("ProximityPrompt", true)
+                           
+                           if cd then
+                              pcall(function() fireclickdetector(cd) end)
+                           elseif pp then
+                              pcall(function() fireproximityprompt(pp) end)
+                           end
+                           
+                           task.wait(0.15)
+                           if _ammo_pickup_matrix._active then
+                              root.CFrame = pos
+                           end
+                           task.wait(1)
+                        end
+                     end
+                  end
+               end)
+            end
+         end)
+         Rayfield:Notify({ Title = "Russia Hub", Content = "Auto Ammo Pickup activated.", Duration = 4 })
+      else
+         _ammo_pickup_matrix._active = false
+         if _ammo_pickup_matrix._thread then
+            task.cancel(_ammo_pickup_matrix._thread)
+            _ammo_pickup_matrix._thread = nil
+         end
+         Rayfield:Notify({ Title = "Russia Hub", Content = "Auto Ammo Pickup deactivated.", Duration = 4 })
+      end
+   end,
+})
+
+Rayfield:Notify({ Title = "Russia Hub", Content = "Russia Hub", Duration = 5, Image = 4483362458 })
+Rayfield:LoadConfiguration()
+
+print("Russia Hub")
